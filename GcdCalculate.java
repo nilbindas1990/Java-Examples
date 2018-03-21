@@ -11,38 +11,45 @@ public class GcdCalculate {
         x = s.nextInt();
         y = s.nextInt();
         boolean a = (x >= 1 && x<= 100000) && (y >= 1 && y <= 100000);
-        int result = 0;
+        //int result = 0;
         if (a){
             //Calling function which will return the result as an int.
             //Comparing the numbers.
-            if (x == y){
-                result = x;
-            }
-            else if (x > y){
-                result = gcdCalculate(x , y);
+
+            if (x > y){
+                gcdCalculate(x , y);
             }
             else {
-                result = gcdCalculate(y , x);
+                gcdCalculate(y ,x);
             }
 
             
         }
-        System.out.println(result);
 
     }
 
     /*Here you will use a recursive function
     which will call it self unless the "remainder" is 0
      */
-    private static int gcdCalculate(int x, int y) {
+    private static void gcdCalculate(int x, int y) {
 
-        int temp;
-        if (x % y != 0){
-                temp = x % y;
-                x = y;
+        int temp = 0;
+        if (x == y){
+            System.out.println(x);
+        }
+        else{
+            if (x % y != 0){
+                //System.out.println("Y:" + y);
+                temp = x % y; //System.out.println("temp:" + temp);
+                x = y; //System.out.println("X:" + x);
                 y = temp;
                 gcdCalculate(x , y);
+            }
+            else {
+                System.out.println(y);
+            }
+
         }
-        return y;
+
     }
 }
