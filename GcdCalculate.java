@@ -13,8 +13,6 @@ public class GcdCalculate {
         boolean a = (x >= 1 && x<= 100000) && (y >= 1 && y <= 100000);
         //int result = 0;
         if (a){
-            //Calling function which will return the result as an int.
-            //Comparing the numbers.
 
             if (x > y){
                 gcdCalculate(x , y);
@@ -28,9 +26,7 @@ public class GcdCalculate {
 
     }
 
-    /*Here you will use a recursive function
-    which will call it self unless the "remainder" is 0
-     */
+
     private static void gcdCalculate(int x, int y) {
 
         int temp = 0;
