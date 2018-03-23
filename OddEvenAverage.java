@@ -35,8 +35,8 @@ public class OddEvenAverage {
             }
         }
 
-        int evenAvg = evenSum / evenCount;
-        int oddAvg = oddSum / oddCount;
+        int evenAvg = Math.round(evenSum / evenCount);
+        int oddAvg = Math.round(oddSum / oddCount);
         int sum = evenAvg + oddAvg;
 
         System.out.print(sum);
