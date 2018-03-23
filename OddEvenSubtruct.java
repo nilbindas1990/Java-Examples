@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 public class OddEvenSubtruct {
 
-    public  static void main(String []args) throws Exception{
+    public  static void main(String []args){
 
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int[] arr = new int[n];
         int oddSum = 0 , evenSum = 0;
 
-        if(n >= 1 && n<= 100000){
+        if(n > 1 && n< 100000){
 
             for(int i = 0; i < n; i++){
                 arr[i] = s.nextInt();
@@ -21,8 +21,8 @@ public class OddEvenSubtruct {
 
         for(int i = 0; i < arr.length; i++){
 
-            if(arr[i] >= 1 && arr[i] <= 100000){
-                int temp = (arr[i] % 2);
+            if(arr[i] > 1 && arr[i] < 100000){
+                int temp = (i % 2);
                 switch(temp){
 
                     case 0:
@@ -39,7 +39,7 @@ public class OddEvenSubtruct {
             int temp = oddSum - evenSum;
             System.out.print(temp);
         }
-        else {
+        else if (evenSum > oddSum){
             int temp = evenSum - oddSum;
             System.out.print(temp);
         }
