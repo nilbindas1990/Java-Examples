@@ -1,5 +1,7 @@
 package com.example.JavaExamples;
 
+import org.jetbrains.annotations.Contract;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -66,6 +68,7 @@ public class MinimumUnsortedArray {
         return -1;
     }
 
+    @Contract(pure = true)
     private static int findMaxUnsort(int[] fullArray, int length, int right, int max) {
         for (int i = length-1; i >= right; i--){
             if (max > fullArray[i]){
@@ -75,6 +78,7 @@ public class MinimumUnsortedArray {
         return -1;
     }
 
+    @Contract(pure = true)
     private static int leftDisorderIndex(int[] fullArray) {
 
         for (int i = 0; i < fullArray.length; i++){
@@ -85,6 +89,7 @@ public class MinimumUnsortedArray {
         return -1;
     }
 
+    @Contract(pure = true)
     private static int rightDisorderIndex(int[] fullArray) {
 
         for (int i = fullArray.length-1; i >= 0; i--){
