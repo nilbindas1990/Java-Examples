@@ -13,6 +13,7 @@ public class OddEvenAverage {
         int[] numArray = new int[sizeOf];
         int oddSum = 0 , evenSum = 0;
         int oddCount = 0 , evenCount = 0;
+        float evenAvg = 0 , oddAvg = 0;
         if (sizeOf > 1 && sizeOf < 100000) {
 
             for (int i = 0; i < sizeOf; i++) {
@@ -29,15 +30,18 @@ public class OddEvenAverage {
             if (temp == 0) {
                 evenSum += numArray[i];
                 evenCount += 1;
+                evenAvg = evenSum / evenCount;
             } else {
                 oddSum += numArray[i];
                 oddCount += 1;
+                oddAvg = oddSum / oddCount;
             }
         }
 
-        int evenAvg = Math.round(evenSum / evenCount);
-        int oddAvg = Math.round(oddSum / oddCount);
-        int sum = evenAvg + oddAvg;
+
+
+
+        int sum = (int) (evenAvg + oddAvg);
 
         System.out.print(sum);
 
